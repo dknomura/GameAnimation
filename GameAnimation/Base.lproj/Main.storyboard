@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BV1-FR-VrT">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wjW-Jn-fB8"/>
+                        <viewControllerLayoutGuide type="bottom" id="cb2-AG-dIv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ue5-ZF-SpM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hfs-C3-RF1" customClass="Ball">
+                                <rect key="frame" x="223" y="-10" width="20" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bey-HK-0qc">
+                                <rect key="frame" x="200" y="525" width="91" height="21"/>
+                                <color key="backgroundColor" red="0.99594267960000005" green="0.3913347311" blue="0.42589316799999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQs-gO-Nca">
+                                <rect key="frame" x="232" y="270" width="90" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="XQt-Nt-Vgp"/>
+                                    <constraint firstAttribute="height" constant="31" id="fVk-3B-xk9"/>
+                                </constraints>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startGame:" destination="BV1-FR-VrT" eventType="touchUpInside" id="5Dp-eH-ZDl"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7sz-Rl-MKh">
+                                <rect key="frame" x="0.0" y="496" width="600" height="29"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTR-PM-Orl">
+                                <rect key="frame" x="0.0" y="496" width="600" height="29"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPI-uQ-qNa">
+                                <rect key="frame" x="0.0" y="545" width="600" height="29"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JQs-gO-Nca" firstAttribute="top" secondItem="wjW-Jn-fB8" secondAttribute="bottom" constant="250" id="28b-GL-0iJ"/>
+                            <constraint firstItem="aPI-uQ-qNa" firstAttribute="top" secondItem="aTR-PM-Orl" secondAttribute="bottom" constant="20" id="2Qw-e5-rDL"/>
+                            <constraint firstItem="Bey-HK-0qc" firstAttribute="top" secondItem="Ue5-ZF-SpM" secondAttribute="top" constant="525" id="2YC-Y2-bmM"/>
+                            <constraint firstItem="cb2-AG-dIv" firstAttribute="top" secondItem="aPI-uQ-qNa" secondAttribute="bottom" constant="26" id="5Ah-mn-UPo"/>
+                            <constraint firstItem="Bey-HK-0qc" firstAttribute="leading" secondItem="Ue5-ZF-SpM" secondAttribute="leading" constant="200" id="8Tf-3f-WNY"/>
+                            <constraint firstItem="aPI-uQ-qNa" firstAttribute="trailing" secondItem="7sz-Rl-MKh" secondAttribute="trailing" id="9OP-u4-wpb"/>
+                            <constraint firstAttribute="trailing" secondItem="Hfs-C3-RF1" secondAttribute="trailing" constant="357" id="9Vn-DP-bOV"/>
+                            <constraint firstItem="JQs-gO-Nca" firstAttribute="leading" secondItem="Ue5-ZF-SpM" secondAttribute="leading" constant="232" id="9co-2P-bwg"/>
+                            <constraint firstAttribute="trailing" secondItem="Bey-HK-0qc" secondAttribute="trailing" constant="309" id="9o7-Rx-OH3"/>
+                            <constraint firstItem="7sz-Rl-MKh" firstAttribute="leading" secondItem="aPI-uQ-qNa" secondAttribute="leading" id="Awe-et-WqQ"/>
+                            <constraint firstItem="aTR-PM-Orl" firstAttribute="leading" secondItem="Ue5-ZF-SpM" secondAttribute="leading" id="G0p-ta-oGm"/>
+                            <constraint firstAttribute="trailing" secondItem="aPI-uQ-qNa" secondAttribute="trailing" id="GjK-y4-Iwe"/>
+                            <constraint firstItem="Bey-HK-0qc" firstAttribute="top" secondItem="7sz-Rl-MKh" secondAttribute="bottom" id="IBd-Qk-ODz"/>
+                            <constraint firstItem="7sz-Rl-MKh" firstAttribute="leading" secondItem="aTR-PM-Orl" secondAttribute="leading" id="J74-Y1-btq"/>
+                            <constraint firstItem="7sz-Rl-MKh" firstAttribute="bottom" secondItem="aTR-PM-Orl" secondAttribute="bottom" id="K1o-sB-op0"/>
+                            <constraint firstItem="Hfs-C3-RF1" firstAttribute="leading" secondItem="Ue5-ZF-SpM" secondAttribute="leading" constant="223" id="RAj-6D-Uft"/>
+                            <constraint firstItem="Hfs-C3-RF1" firstAttribute="top" secondItem="Ue5-ZF-SpM" secondAttribute="topMargin" constant="-10" id="Tgp-fb-KU5"/>
+                            <constraint firstItem="wjW-Jn-fB8" firstAttribute="top" secondItem="Hfs-C3-RF1" secondAttribute="bottom" constant="10" id="bYJ-eY-qNh"/>
+                            <constraint firstItem="7sz-Rl-MKh" firstAttribute="top" secondItem="Ue5-ZF-SpM" secondAttribute="top" constant="496" id="oz6-dC-ZsP"/>
+                            <constraint firstItem="aTR-PM-Orl" firstAttribute="top" secondItem="7sz-Rl-MKh" secondAttribute="top" id="srd-GR-3aT"/>
+                            <constraint firstItem="cb2-AG-dIv" firstAttribute="top" secondItem="Bey-HK-0qc" secondAttribute="bottom" constant="54" id="yZn-eS-8bq"/>
+                            <constraint firstItem="aTR-PM-Orl" firstAttribute="trailing" secondItem="7sz-Rl-MKh" secondAttribute="trailing" id="z7Y-sl-sSH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ballView" destination="Hfs-C3-RF1" id="Tye-S5-4ge"/>
+                        <outlet property="barView" destination="Bey-HK-0qc" id="cql-jb-VRG"/>
+                        <outlet property="bottomBarBoundary" destination="aPI-uQ-qNa" id="6hM-sQ-nbS"/>
+                        <outlet property="startButton" destination="JQs-gO-Nca" id="u46-EH-jpR"/>
+                        <outlet property="topBarBoundary" destination="aTR-PM-Orl" id="qBh-Bl-ZHH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="180" y="434"/>
+        </scene>
+    </scenes>
+</document>
