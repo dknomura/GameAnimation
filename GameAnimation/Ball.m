@@ -13,6 +13,7 @@
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
+
 - (void)drawRect:(CGRect)rect {
     [super drawRect:rect];
     
@@ -22,5 +23,16 @@
     CGContextFillPath(context);
 }
 
+//-(void) changeBallColor: (UIColor*) color
+//{
+//    CGFloat red = arc4random_uniform(255) / 255.0;
+//    CGFloat green = arc4random_uniform(255) / 255.0;
+//    CGFloat blue = arc4random_uniform(255) / 255.0;
+//    UIColor *randomColor = [UIColor colorWithRed:red green:green blue:blue alpha:1];
+//    CGContextRef context = UIGraphicsGetCurrentContext();
+//    CGContextAddEllipseInRect(context, rect);
+//    CGContextSetFillColor(context, CGColorGetComponents([randomColor CGColor]));
+//    CGContextFillPath(context);
+//}
 
 @end

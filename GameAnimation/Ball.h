@@ -10,5 +10,5 @@
 #import <CoreGraphics/CoreGraphics.h>
 
 @interface Ball : UIView
-
+-(void) changeBallColor:(UIColor*)color;
 @end
